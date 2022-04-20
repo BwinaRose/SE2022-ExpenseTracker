@@ -1,0 +1,15 @@
+{
+    "folders": [
+		{
+			"name": "devSE",
+			"path": ".."
+		},
+		{
+			"name": "settings-page",
+			"path": "../../Desktop/settings-page"
+		}
+	],
+    "settings": {
+        "git.ignoreLimitWarning": true
+    }
+}

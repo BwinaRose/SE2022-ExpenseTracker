@@ -33,22 +33,155 @@
     </div>
     <div>
 
-        <button id="ibtn" class="button catbtn"><i class="fa-solid fa-house fa-2xl"></i></button>
-        <button id="ibtn2" class="button catbtn"><i class="fa-solid fa-car fa-2xl"></i></button>
-        <button id="ibtn3" class="button catbtn"><i class="fa-solid fa-utensils fa-2xl"></i></button>
-        <button id="ibtn4" class="button catbtn"><i class="fa-solid fa-faucet-drip fa-2xl"></i></button>
-        <button id="ibtn5" class="button catbtn"><i class="fa-solid fa-house-chimney-crack fa-2xl"></i></button>
-        <button id="ibtn6" class="button catbtn"><i class="fa-solid fa-book-medical fa-2xl"></i></button>
-        <button id="ibtn7" class="button catbtn"><i class="fa-solid fa-piggy-bank fa-2xl"></i></button>
-        <button id="ibtn8" class="button catbtn"><i class="fa-solid fa-person fa-2xl"></i></button>
-        <button id="ibtn9" class="button catbtn"><i class="fa-solid fa-tv fa-2xl"></i></button>
-        <button id="ibtn10" class="button catbtn"><i class="fa-solid fa-list-ul fa-2xl"></i></button>
+        <button id="ibtn" class="button catbtn" data-hover="Housing"><i class="fa-solid fa-house fa-2xl"></i></button>
+        <button id="ibtn2" class="button catbtn" data-hover="Transportaion"><i class="fa-solid fa-car fa-2xl"></i></button>
+        <button id="ibtn3" class="button catbtn" data-hover="Food"><i class="fa-solid fa-utensils fa-2xl"></i></button>
+        <button id="ibtn4" class="button catbtn" data-hover="Utilities"><i class="fa-solid fa-faucet-drip fa-2xl"></i></button>
+        <button id="ibtn5" class="button catbtn" data-hover="Insurance"><i class="fa-solid fa-house-chimney-crack fa-2xl"></i></button>
+        <button id="ibtn6" class="button catbtn" data-hover="Medical"><i class="fa-solid fa-book-medical fa-2xl"></i></button>
+        <button id="ibtn7" class="button catbtn" data-hover="Savings"><i class="fa-solid fa-piggy-bank fa-2xl"></i></button>
+        <button id="ibtn8" class="button catbtn" data-hover="Education"><i class="fa-solid fa-apple-whole fa-2xl"></i></button>
+        <button id="ibtn9" class="button catbtn" data-hover="Entertainment"><i class="fa-solid fa-tv fa-2xl"></i></button>
+        <button id="ibtn10" class="button catbtn" data-hover="Miscellaneous"><i class="fa-solid fa-list-ul fa-2xl"></i></button>
 
-        <div id="imodal" class="modal">
+
+        <div id="modal" class="modal">
             <div class="content">
                 <span class="close">&times;</span>
+                <form>
 
-                <body>This is the budget modal</body>
+                    <body>Housing</body>
+                    <br></br>
+                    <label for="housing">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i1 class="subbtn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="content">
+                <span class="close">&times;</span>
+                <form>
+
+                    <body>Transportaion</body>
+                    <br></br>
+                    <label for="transportaion">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i2 class="subbtn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="content">
+                <span class="close">&times;</span>
+                <form>
+
+                    <body>Food</body>
+                    <br></br>
+                    <label for="food">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i3 class="subbtn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="content">
+                <span class="close">&times;</span>
+                <form>
+
+                    <body>Utilities</body>
+                    <br></br>
+                    <label for="utilities">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i4 class="subbtn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal5" class="modal">
+            <div class="content">
+                <span class="close">&times;</span>
+                <form>
+
+                    <body>Insurance</body>
+                    <br></br>
+                    <label for="insurance">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i5 class="subbtn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal6" class="modal">
+            <div class="content">
+                <span class="close">&times;</span>
+                <form>
+
+                    <body>Medical</body>
+                    <br></br>
+                    <label for="medical">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i6 class="subbtn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal7" class="modal">
+            <div class="content">
+                <span class="close">&times;</span>
+                <form>
+
+                    <body>Investments & Savings</body>
+                    <br></br>
+                    <label for="savings">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i7 class="subbtn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal8" class="modal">
+            <div class="content">
+                <span class="close">&times;</span>
+                <form>
+
+                    <body>Education</body>
+                    <br></br>
+                    <label for="education">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i8 class="subbtn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal9" class="modal">
+            <div class="content">
+                <span class="close">&times;</span>
+                <form>
+
+                    <body>Entertainment</body>
+                    <br></br>
+                    <label for="entertainment">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i9 class="subbtn" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div id="modal10" class="modal">
+            <div class="content">
+                <span class="close">&times;</span>
+                <form>
+
+                    <body>Miscellaneous</body>
+                    <br></br>
+                    <label for="miscellaneous">$</label>
+                    <input type="text" class="text" placeholder="Enter amount..."><br><br>
+                    <input id=i10 class="subbtn" type="submit" value="Submit">
+                </form>
             </div>
         </div>
 

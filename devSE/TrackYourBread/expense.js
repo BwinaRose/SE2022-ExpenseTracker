@@ -4,8 +4,9 @@ const balance = document.getElementById('balance');
 const list = document.getElementById('list');
 const form = document.getElementById('form');
 const text = document.getElementById('text');
+const typelist = document.getElementById('typelist');
+const typelistchoice = { currentChoice: '' }
 const amount = document.getElementById('amount');
-
 // const dummyTransactions = [
 //   { id: 1, text: 'Flower', amount: -20 },
 //   { id: 2, text: 'Salary', amount: 300 },
@@ -24,12 +25,13 @@ let transactions =
 function addTransaction(e) {
     e.preventDefault();
 
-    if (text.value.trim() === '' || amount.value.trim() === '') {
-        alert('Please add a text and amount');
+    if (text.value.trim() === '' || amount.value.trim() === '' || typelistchoice.currentChoice.trim() === '') {
+        alert('Please add a text and amount and choose type');
     } else {
         const transaction = {
             id: generateID(),
             text: text.value,
+            typelistchoice: typelistchoice.currentChoice,
             amount: +amount.value
         };
 
@@ -43,6 +45,7 @@ function addTransaction(e) {
 
         text.value = '';
         amount.value = '';
+        typelistchoice.currentChoice = '';
     }
 }
 
@@ -54,17 +57,17 @@ function generateID() {
 // Add transactions to DOM list
 function addTransactionDOM(transaction) {
     // Get sign
-    const sign = transaction.amount < 0 ? '-' : '+';
+    const sign = transaction.amount < 0 ? '$' : '$';
 
     const item = document.createElement('li');
 
     // Add class based on value
-    item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
+    item.classList.add(transaction.amount < 0 ? 'plus' : 'plus');
 
     item.innerHTML = `
-    ${transaction.text} <span>${sign}${Math.abs(
-    transaction.amount
-  )}</span> <button class="delete-btn" onclick="removeTransaction(${
+    ${sign}${Math.abs(
+        transaction.amount
+      )} ${transaction.text}<span>${transaction.typelistchoice}</span> <button class="delete-btn" onclick="removeTransaction(${
     transaction.id
   })">x</button>
   `;
@@ -84,8 +87,7 @@ function updateValues() {
         .toFixed(2);
 
     const expense = (
-        amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
-        -1
+        amounts.filter(item => item > 0).reduce((acc, item) => (acc += item), 0)
     ).toFixed(2);
 
     balance.innerText = `$${total}`;
@@ -118,3 +120,61 @@ function init() {
 init();
 
 form.addEventListener('submit', addTransaction);
+
+
+const choices = ["Housing", "Food", "Education", "Medical", "Transportation", "Miscellaneous", "Insurance", "Utilities", "Investing/Saving"];
+
+document.querySelector('#Housing').onclick = setHousing
+document.querySelector('#Food').onclick = setFood
+document.querySelector('#Education').onclick = setEducation
+document.querySelector('#Medical').onclick = setMedical
+document.querySelector('#Transportation').onclick = setTransportation
+document.querySelector('#Miscellaneous').onclick = setMiscellaneous
+document.querySelector('#Insurance').onclick = setInsurance
+document.querySelector('#Utilities').onclick = setUtilities
+document.querySelector('#InvestingSaving').onclick = setInvestingSaving;
+
+function setHousing() {
+    typelistchoice.currentChoice = choices[0];
+    console.log(typelistchoice.currentChoice);
+}
+
+function setFood() {
+    typelistchoice.currentChoice = choices[1];
+    console.log(typelistchoice.currentChoice);
+}
+
+function setEducation() {
+    typelistchoice.currentChoice = choices[2];
+    console.log(typelistchoice.currentChoice);
+}
+
+function setTransportation() {
+    typelistchoice.currentChoice = choices[4];
+    console.log(typelistchoice.currentChoice);
+}
+
+function setMiscellaneous() {
+    typelistchoice.currentChoice = choices[5];
+    console.log(typelistchoice.currentChoice);
+}
+
+function setMedical() {
+    typelistchoice.currentChoice = choices[3];
+    console.log(typelistchoice.currentChoice);
+}
+
+function setInsurance() {
+    typelistchoice.currentChoice = choices[6];
+    console.log(typelistchoice.currentChoice);
+}
+
+function setUtilities() {
+    typelistchoice.currentChoice = choices[7];
+    console.log(typelistchoice.currentChoice);
+}
+
+function setInvestingSaving() {
+    typelistchoice.currentChoice = choices[8];
+    console.log(typelistchoice.currentChoice);
+}
