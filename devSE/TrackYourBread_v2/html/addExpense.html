@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="expense.css" />
+    <link rel="stylesheet" type="text/css" href="../css/expense.css" />
     <title>Expense Tracker</title>
 </head>
 
@@ -27,7 +27,7 @@
         </nav>
     </div>
 
-
+    <div></div>
     <div class="container">
         <form id="form">
             <div class="form-control">
@@ -36,34 +36,37 @@
             </div>
             <div class="form-control">
                 <label for="amount">Expense Amount</label>
-          <input type="number" id="amount" placeholder="Enter amount..." />
-          <div>
-            <label >Expense Type</label><br>
-            <button class='btn1' id="Food">Food</button>
-            <button class='btn1' id="Housing">Housing</button>
-            <button class='btn1' id="Education">Education</button>
-            <button class='btn1' id="Medical">Medical</button>
-            <button class='btn1' id="Miscellaneous">Miscellaneous</button>
-            <button class='btn1' id="Transportation">Transportation</button>
-            <button class='btn1' id="Insurance">Insurance</button>
-            <button class='btn1' id="Utilities">Utilities</button>
-            <button class='btn1' id="InvestingSaving">Investing/Saving</button>
-            <br><br>(Clicking on a category will enter your transaction)</font-size:>
-        </div>
-        </div>
-      </form>
-       <br><h4>Total Spendings</h4>
+                <input type="number" id="amount" placeholder="Enter amount..." />
+                <div>
+                    <label>Expense Type</label><br>
+                    <button class='btn1' id="Food">Food</button>
+                    <button class='btn1' id="Housing">Housing</button>
+                    <button class='btn1' id="Education">Education</button>
+                    <button class='btn1' id="Medical">Medical</button>
+                    <button class='btn1' id="Miscellaneous">Miscellaneous</button>
+                    <button class='btn1' id="Transportation">Transportation</button>
+                    <button class='btn1' id="Insurance">Insurance</button>
+                    <button class='btn1' id="Utilities">Utilities</button>
+                    <button class='btn1' id="InvestingSaving">Investing/Saving</button>
+                    <br><br>(Clicking on a category will enter your transaction)</font-size:>
+                </div>
+            </div>
+        </form>
+        <br>
+        <h4>Total Spendings</h4>
         <h1 id="balance"></h1>
 
 
         <h3>History</h3>
         <ul id="list" class="list">
-            //<-- <li class="minus">
-          Cash <span>-$400</span><button class="delete-btn">x</button>
-        </li> -->
+            //
+            <-- <li class="minus">
+                Cash <span>-$400</span><button class="delete-btn">x</button>
+                </li> -->
         </ul>
     </div>
 
     <script src="expense.js"></script>
-  </body>
+</body>
+
 </html>
