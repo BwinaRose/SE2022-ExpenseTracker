@@ -264,7 +264,7 @@
                             <script>
                                 document.addEventListener("DOMContentLoaded", () => {
                                     new ApexCharts(document.querySelector("#pieChart"), {
-                                        series: [44, 55, 13, 43, 22],
+                                        series: [10, 10, 10, 10, 10, 10, 10, 10, 10],
                                         chart: {
                                             height: 350,
                                             type: 'pie',
@@ -272,7 +272,7 @@
                                                 show: true
                                             }
                                         },
-                                        labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E']
+                                        labels: ['Housing', 'Transportation', 'Food', 'Utilities', 'Insurance', 'Medical', 'Investments', 'Education', 'Miscellaneous']
                                     }).render();
                                 });
                             </script>
@@ -307,6 +307,8 @@
 
     <!-- Template Main JS File -->
     <script src="../NiceAdmin/assets/js/main.js"></script>
+    <script src="../js/dash.js"></script>
+    <script type="module" src="../js/expense.js"></script>
 
 </body>
 
