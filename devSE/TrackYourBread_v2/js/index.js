@@ -1,6 +1,12 @@
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    
+    apiKey: "AIzaSyAutjFNgLFLxIVO2wsOmyOJAOf5rmiOZCY",
+    authDomain: "trackyourbread.firebaseapp.com",
+    projectId: "trackyourbread",
+    storageBucket: "trackyourbread.appspot.com",
+    messagingSenderId: "932058951949",
+    appId: "1:932058951949:web:92e8329770ed1913b64044",
+    measurementId: "G-9ZKQGQPEMW"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -139,4 +145,8 @@ function validate_field(field) {
     } else {
         return true
     }
+}
+
+function notSignedIn() {
+    alert("Please sign in or register")
 }

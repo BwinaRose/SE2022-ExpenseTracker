@@ -52,7 +52,7 @@
                 <img src="https://www.pngkey.com/png/detail/979-9794979_kawaii-bread-cartoon.png" alt="">
                 <span class="d-none d-lg-block">TrackYourBread</span>
             </a>
-            <i class="bi bi-list toggle-sidebar-btn"></i>
+            <!-- <i class="bi bi-list toggle-sidebar-btn"></i> -->
         </div>
         <!-- End Logo -->
 
@@ -61,13 +61,13 @@
             <ul class="d-flex align-items-center">
 
 
-                <!-- <li class="nav-item dropdown pe-3">
+                <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2">User</span>
                     </a>
-                    
+
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
@@ -79,9 +79,10 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                            <a class="dropdown-item d-flex align-items-center">
+                                <!-- <a class="dropdown-item d-flex align-items-center" href="users-profile.html"> -->
                                 <i class="bi bi-person"></i>
-                                <span>My Profile</span>
+                                <span onclick="notSignedIn()">My Profile</span>
                             </a>
                         </li>
                         <li>
@@ -89,9 +90,10 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                            <a class="dropdown-item d-flex align-items-center">
+                                <!-- <a class="dropdown-item d-flex align-items-center" href="users-profile.html"> -->
                                 <i class="bi bi-gear"></i>
-                                <span>Account Settings</span>
+                                <span onclick="notSignedIn()">Account Settings</span>
                             </a>
                         </li>
                         <li>
@@ -99,8 +101,9 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                            <a class="dropdown-item d-flex align-items-center">
                                 <i class="bi bi-question-circle"></i>
+                                <a class="dropdown-item d-flex align-items-center" href="faq.html"></a>
                                 <span>Need Help?</span>
                             </a>
                         </li>
@@ -116,9 +119,9 @@
                         </li>
 
                     </ul>
-                    End Profile Dropdown Items -->
-                <!--</li> 
-                End Profile Nav -->
+                    <!--End Profile Dropdown Items -->
+                </li>
+                <!--End Profile Nav-->
 
             </ul>
         </nav>
@@ -128,7 +131,7 @@
     <!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
+    <!-- <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -138,7 +141,7 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <!-- End Dashboard Nav -->
+             
             <li class="nav-item">
                 <a class="nav-link collapsed" href="budget.html">
                     <i class="fa-solid fa-coins"></i><span>Budget</span>
@@ -157,7 +160,7 @@
                 </a>
             </li>
         </ul>
-    </aside>
+    </aside> -->
     <!-- End Sidebar-->
 
     <!--  -->
@@ -196,7 +199,19 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
+    <script src="../NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="../NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../NiceAdmin/assets/vendor/chart.js/chart.min.js"></script>
+    <script src="../NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="../NiceAdmin/assets/vendor/quill/quill.min.js"></script>
+    <script src="../NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="../NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="../NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="https://kit.fontawesome.com/1f890e7ddc.js" crossorigin="anonymous"></script>
+
     <!-- Our script must be loaded after firebase references -->
+    <script src="../NiceAdmin/assets/js/main.js"></script>
     <script src="../js/index.js"></script>
 
 </html>

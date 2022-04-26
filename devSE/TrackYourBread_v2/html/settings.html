@@ -27,8 +27,8 @@
     <link href="../NiceAdmin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="../css/expense.css" />
     <link href="../NiceAdmin/assets/css/style.css" rel="stylesheet">
+    <link href="../css/settings.css" rel="stylesheet">
 
     <!-- =======================================================
     
@@ -41,7 +41,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="dash.html" class="logo d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center">
                 <img src="https://www.pngkey.com/png/detail/979-9794979_kawaii-bread-cartoon.png" alt="">
                 <span class="d-none d-lg-block">TrackYourBread</span>
             </a>
@@ -60,7 +60,7 @@
                         <img src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                     </a>
-                    <!-- End Profile Image Icon -->
+                    <!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
@@ -152,29 +152,36 @@
         </ul>
     </aside>
     <!-- End Sidebar-->
+
+
+
+
+
+
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>History</h1>
+            <h1>My Profile</h1>
             <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="dash.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="expense.html">History</a></li>
-                </ol>
+
             </nav>
         </div>
         <!-- End Page Title -->
-        <div class="container">
-            <h4>Total Spendings</h4>
-            <h1 id="balance">$0.00</h1>
 
-            <h3>History</h3>
-            <ul id="list" class="list">
-                <-- <li class="minus">
-                    Cash <span>-$400</span><button class="delete-btn">x</button>
-                    </li> -->
-            </ul>
-        </div>
+
+
+        <main>
+            <form enctype="multipart/form-data" action="python_script.py" method="post">
+                <p class="settingHead">Profile Picture</p>
+
+                <p>Upload File: <input type="file" name="filename" /></p>
+
+                <p class="settingHead">About You</p>
+                <input placeholder="about you" type="text" class="bio">
+                <div class="space">
+                </div>
+                <btn class="btn btn-primary" id="saveData">Save</btn>
+        </main>
 
         <!-- ======= Footer ======= -->
         <footer id="footer" class="footer">
@@ -196,8 +203,9 @@
         <script src="https://kit.fontawesome.com/1f890e7ddc.js" crossorigin="anonymous"></script>
 
         <!-- Template Main JS File -->
-        <script src="../js/expense.js"></script>
         <script src="../NiceAdmin/assets/js/main.js"></script>
+        <script src="../js/dash.js"></script>
+        <script type="module" src="../js/expense.js"></script>
 
 </body>
 

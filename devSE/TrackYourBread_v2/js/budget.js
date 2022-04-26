@@ -14,3 +14,7 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function logOut() {
+    window.location.href = "../html/index.html";
+}

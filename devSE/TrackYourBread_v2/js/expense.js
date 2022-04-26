@@ -5,7 +5,7 @@ const list = document.getElementById('list');
 const form = document.getElementById('form');
 const text = document.getElementById('text');
 const typelist = document.getElementById('typelist');
-const typelistchoice = {currentChoice:''}
+const typelistchoice = { currentChoice: '' }
 const amount = document.getElementById('amount');
 // const dummyTransactions = [
 //   { id: 1, text: 'Flower', amount: -20 },
@@ -25,10 +25,9 @@ let transactions =
 function addTransaction(e) {
     e.preventDefault();
 
-    if (text.value.trim() === '' || amount.value.trim() === ''||typelistchoice.currentChoice.trim() === '') {
+    if (text.value.trim() === '' || amount.value.trim() === '' || typelistchoice.currentChoice.trim() === '') {
         alert('Please add a text and amount and choose type');
-    }
-     else {
+    } else {
         const transaction = {
             id: generateID(),
             text: text.value,
@@ -135,39 +134,51 @@ document.querySelector('#Insurance').onclick = setInsurance
 document.querySelector('#Utilities').onclick = setUtilities
 document.querySelector('#InvestingSaving').onclick = setInvestingSaving;
 
-function setHousing(){
+function setHousing() {
     typelistchoice.currentChoice = choices[0];
     console.log(typelistchoice.currentChoice);
 }
-function setFood(){
+
+function setFood() {
     typelistchoice.currentChoice = choices[1];
     console.log(typelistchoice.currentChoice);
 }
-function setEducation(){
+
+function setEducation() {
     typelistchoice.currentChoice = choices[2];
     console.log(typelistchoice.currentChoice);
 }
-function setTransportation(){
+
+function setTransportation() {
     typelistchoice.currentChoice = choices[4];
     console.log(typelistchoice.currentChoice);
 }
-function setMiscellaneous(){
+
+function setMiscellaneous() {
     typelistchoice.currentChoice = choices[5];
     console.log(typelistchoice.currentChoice);
 }
-function setMedical(){
+
+function setMedical() {
     typelistchoice.currentChoice = choices[3];
     console.log(typelistchoice.currentChoice);
 }
-function setInsurance(){
+
+function setInsurance() {
     typelistchoice.currentChoice = choices[6];
     console.log(typelistchoice.currentChoice);
 }
-function setUtilities(){
+
+function setUtilities() {
     typelistchoice.currentChoice = choices[7];
     console.log(typelistchoice.currentChoice);
 }
-function setInvestingSaving(){
+
+function setInvestingSaving() {
     typelistchoice.currentChoice = choices[8];
     console.log(typelistchoice.currentChoice);
+}
+
+function logOut() {
+    window.location.href = "../html/index.html";
 }

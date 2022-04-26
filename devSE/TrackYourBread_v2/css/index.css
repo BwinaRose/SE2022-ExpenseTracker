@@ -30,8 +30,9 @@ body {
 }
 
 #content_container {
-    width: 150%;
+    width: 90%;
     height: 70%;
+    left: 50%;
 }
 
 #form_container {
