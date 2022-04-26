@@ -1,9 +1,20 @@
+import functions from 'firebase-functions';
+const admin = require('firebase-admin');
+admin.initializeApp();
+
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    
+    apiKey: "AIzaSyAutjFNgLFLxIVO2wsOmyOJAOf5rmiOZCY",
+    authDomain: "trackyourbread.firebaseapp.com",
+    projectId: "trackyourbread",
+    storageBucket: "trackyourbread.appspot.com",
+    messagingSenderId: "932058951949",
+    appId: "1:932058951949:web:92e8329770ed1913b64044",
+    measurementId: "G-9ZKQGQPEMW"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
 // Initialize variables
 const auth = firebase.auth()
 const database = firebase.database()

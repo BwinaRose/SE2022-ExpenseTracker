@@ -16,5 +16,5 @@ window.onclick = function(event) {
 }
 
 function logOut() {
-    window.location.href = "../html/index.html";
+    window.location.href = "../html/login.html";
 }
