@@ -1,13 +1,13 @@
 const balance = document.getElementById('balance');
 
-// const localStorageTransactions = JSON.parse(
-//     localStorage.getItem('transactions')
-// );
+const localStorageTransactions = JSON.parse(
+    localStorage.getItem('transactions')
+);
 
-// let transactions =
-//     localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
+let transactions =
+    localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
 
-let transactions = JSON.parse(localStorage.getItem('transactions'));
+// let transactions = JSON.parse(localStorage.getItem('transactions'));
 
 const transactionLocal = transactions
 
@@ -27,6 +27,10 @@ console.log(transactions);
 const iterator = transactions.values()
 for (let key of iterator) {
     console.log(transactions[key]);
+}
+
+function logOut() {
+    window.location.href = "../html/index.html";
 }
 
 
