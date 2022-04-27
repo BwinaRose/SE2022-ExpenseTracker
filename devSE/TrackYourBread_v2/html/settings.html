@@ -28,7 +28,7 @@
 
     <!-- Template Main CSS File -->
     <link href="../NiceAdmin/assets/css/style.css" rel="stylesheet">
-    <link href="../css/settings.css" rel="stylesheet">
+    <link href="../css/profile.css" rel="stylesheet">
 
     <!-- =======================================================
     
@@ -41,7 +41,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="dash.html" class="logo d-flex align-items-center">
                 <img src="https://www.pngkey.com/png/detail/979-9794979_kawaii-bread-cartoon.png" alt="">
                 <span class="d-none d-lg-block">TrackYourBread</span>
             </a>
@@ -60,7 +60,7 @@
                         <img src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                     </a>
-                    <!-- End Profile Iamge Icon -->
+                    <!-- End Profile Image Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
@@ -72,7 +72,7 @@
                         </li>
 
                         <li>
-                            <a class="dropdown-item d-flex align-items-center" href="settings.html">
+                            <a class="dropdown-item d-flex align-items-center" href="profile.html">
                                 <i class="bi bi-person"></i>
                                 <span>My Profile</span>
                             </a>
@@ -102,7 +102,7 @@
                         </li>
 
                         <li onclick="logOut()">
-                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign Out</span>
                             </a>
@@ -157,7 +157,7 @@
 
 
 
-
+    <!-- Main Page -->
     <main id="main" class="main">
 
         <div class="pagetitle">
@@ -171,16 +171,26 @@
 
 
         <main>
+            <h4><strong>Personal Information</strong></h4>
             <form enctype="multipart/form-data" action="python_script.py" method="post">
-                <p class="settingHead">Profile Picture</p>
 
-                <p>Upload File: <input type="file" name="filename" /></p>
+                </select>
 
-                <p class="settingHead">About You</p>
-                <input placeholder="about you" type="text" class="bio">
                 <div class="space">
                 </div>
+
+                <p>Email: <input type="text" class="input"></p>
+
+                <p>Password: <input type="text" class="input"></p>
+                </p>
+
+
+
+
                 <btn class="btn btn-primary" id="saveData">Save</btn>
+
+
+
         </main>
 
         <!-- ======= Footer ======= -->

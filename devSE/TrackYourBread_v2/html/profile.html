@@ -28,26 +28,7 @@
 
     <!-- Template Main CSS File -->
     <link href="../NiceAdmin/assets/css/style.css" rel="stylesheet">
-
-
-
-    <!-- Vendor JS Files -->
-    <script src="../NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="../NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../NiceAdmin/assets/vendor/chart.js/chart.min.js"></script>
-    <script src="../NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
-    <script src="../NiceAdmin/assets/vendor/quill/quill.min.js"></script>
-    <script src="../NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="../NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="../NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
-
-    <script src="https://kit.fontawesome.com/1f890e7ddc.js" crossorigin="anonymous"></script>
-
-    <!-- Template Main JS File -->
-    <script src="../NiceAdmin/assets/js/main.js"></script>
-    <script src="../js/dash.js"></script>
-    <script type="module" src="../js/expense.js"></script>
-    <script type="module" src="../js/index.js"></script>
+    <link href="../css/profile.css" rel="stylesheet">
 
     <!-- =======================================================
     
@@ -79,11 +60,11 @@
                         <img src="https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
                     </a>
-                    <!-- End Profile Iamge Icon -->
+                    <!-- End Profile Image Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6 id="fullName"></h6>
+                            <h6>Kevin Anderson</h6>
                             <span>Web Designer</span>
                         </li>
                         <li>
@@ -121,7 +102,7 @@
                         </li>
 
                         <li onclick="logOut()">
-                            <a class="dropdown-item d-flex align-items-center" href="login.html">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
                                 <i class="bi bi-box-arrow-right"></i>
                                 <span>Sign Out</span>
                             </a>
@@ -176,64 +157,73 @@
 
 
 
-
+    <!-- Main Page -->
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Dashboard</h1>
+            <h1>My Profile</h1>
             <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="dash.html">Home</a></li>
-                </ol>
+
             </nav>
         </div>
         <!-- End Page Title -->
 
 
 
-        <section class="section">
-            <div class="row">
+        <main>
+            <h4><strong>Personal Information</strong></h4>
+            <form enctype="multipart/form-data" action="python_script.py" method="post">
+                <p class="settingHead">Profile Picture</p>
+                <p>Upload File: <input type="file" name="filename" accept="image/gif, image/jpeg, image/png" /></p>
 
-                <div class="col-lg-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Pie Chart</h5>
+                <p>Name: <input type="text" class="input" placeholder="Name"></p>
+                <p>Birthday: <input type="date" class="input"></p>
+                <p> Gender: <select name="Gender" id="Gender"> </p>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    <option value="Oth">Other</option>
+                    <option value="PNTS">Perfer Not to Say</option>
+                </select>
 
-                            <!-- Pie Chart -->
-                            <div id="pieChart"></div>
-
-                            <script>
-                                document.addEventListener("DOMContentLoaded", () => {
-                                    new ApexCharts(document.querySelector("#pieChart"), {
-                                        series: [7, 23, 40, 3, 67, 54, 77, 8, 88],
-                                        chart: {
-                                            height: 350,
-                                            type: 'pie',
-                                            toolbar: {
-                                                show: true
-                                            }
-                                        },
-                                        labels: ['Housing', 'Transportation', 'Food', 'Utilities', 'Insurance', 'Medical', 'Investments', 'Education', 'Miscellaneous']
-                                    }).render();
-                                });
-                            </script>
-                            <!-- End Pie Chart -->
-                        </div>
+                    <p class="settingHead">About You</p>
+                    <textarea class="bio" placeholder="About you..." id="message" rows="4"></textarea>
+                    <div class="space">
                     </div>
-                </div>
-            </div>
-        </section>
 
-    </main>
-    <!-- End #main -->
+                    <h4><strong>Education</strong></h4>
+                    <p>Institution: <input type="text" class="input"></p>
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-    </footer>
-    <!-- End Footer -->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+                    <btn class="btn btn-primary" id="saveData">Save</btn>
+
+
+
+        </main>
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer" class="footer">
+        </footer>
+        <!-- End Footer -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="../NiceAdmin/assets/vendor/apexcharts/apexcharts.min.js"></script>
+        <script src="../NiceAdmin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../NiceAdmin/assets/vendor/chart.js/chart.min.js"></script>
+        <script src="../NiceAdmin/assets/vendor/echarts/echarts.min.js"></script>
+        <script src="../NiceAdmin/assets/vendor/quill/quill.min.js"></script>
+        <script src="../NiceAdmin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+        <script src="../NiceAdmin/assets/vendor/tinymce/tinymce.min.js"></script>
+        <script src="../NiceAdmin/assets/vendor/php-email-form/validate.js"></script>
+
+        <script src="https://kit.fontawesome.com/1f890e7ddc.js" crossorigin="anonymous"></script>
+
+        <!-- Template Main JS File -->
+        <script src="../NiceAdmin/assets/js/main.js"></script>
+        <script src="../js/dash.js"></script>
+        <script type="module" src="../js/expense.js"></script>
 
 </body>
 

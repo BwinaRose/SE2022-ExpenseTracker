@@ -1,4 +1,4 @@
-import functions from 'firebase-functions';
+const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
 
@@ -13,6 +13,7 @@ const firebaseConfig = {
     appId: "1:932058951949:web:92e8329770ed1913b64044",
     measurementId: "G-9ZKQGQPEMW"
 };
+
 // Initialize Firebase
 // firebase.initializeApp(firebaseConfig);
 // Initialize variables
