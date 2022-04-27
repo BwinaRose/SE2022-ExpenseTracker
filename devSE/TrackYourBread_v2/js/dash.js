@@ -16,6 +16,7 @@ const amounts = transactions.map(transaction => transaction.amount);
 const total = amounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
 
 console.log(transactions);
+
 //console.log(transactionLocal)
 
 
@@ -24,13 +25,10 @@ console.log(transactions);
 //     console.log(key);
 // }
 
-const iterator = transactions.values()
-for (let key of iterator) {
-    console.log(transactions[key]);
-}
+
 
 function logOut() {
-    window.location.href = "../html/index.html";
+    window.location.href = "../html/login.html";
 }
 
 
